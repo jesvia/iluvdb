@@ -35,7 +35,7 @@ class StreamPlatformSerializer(serializers.ModelSerializer):
 #     return value 
 # class MovieSerializer(serializers.Serializer):
 #     id = serializers.IntegerField(read_only=True)
-#     name =serializers.CharField(validators = [name_length])
+#     name =serializers.CharField(validators = [name_length]) #HERE WE USED VALIDATORS VALIDATOR
 #     description = serializers.CharField()
 #     active = serializers.BooleanField()
     
@@ -48,13 +48,15 @@ class StreamPlatformSerializer(serializers.ModelSerializer):
 #         instance.active = validated_data.get('active', instance.active)
 #         instance.save()
 #         return instance
-    
+
+# FIELD LEVEL VALIDATION
 #     # def validate_name(self, value):
 #     #     if len(value) < 2:
 #     #         raise serializers.ValidationError("Name too short man")
 #     #     else:
 #     #         return value
-        
+
+# OBJECT LEVEL VALIDATION   
 #     def validate(self, data):
 #         if data['name'] == data['description']:
 #             raise serializers.ValidationError("Name and Desc can't be same")

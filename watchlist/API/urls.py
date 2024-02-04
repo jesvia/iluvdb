@@ -7,5 +7,5 @@ urlpatterns = [
     path('list/', WatchListAV.as_view(), name='watch-list'),
     path('<int:pk>', WatchDetailsAV.as_view(), name='watch-details'),
     path('splist/', StreamPlatListAV.as_view(), name='sp-list'),
-    # path('spl/<int:pk>', StreamPlatDetailsAV.as_view(), name='sp-details')
+    path('splist/<int:pk>', StreamPlatDetailsAV.as_view(), name='sp-details')
 ]
